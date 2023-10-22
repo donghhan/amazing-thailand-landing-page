@@ -8,6 +8,7 @@
 
 body {
   font-family: $prompt;
+  font-size: 10px;
 }
 
 a {
@@ -28,5 +29,6 @@ h2 {
 
 button {
   background: transparent;
+  border: transparent;
   cursor: pointer;
 }

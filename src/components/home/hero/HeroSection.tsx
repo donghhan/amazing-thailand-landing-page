@@ -12,7 +12,6 @@ export default function HeroSection() {
         alt="Hero background image"
         quality={100}
         fill
-        sizes="100vw"
         style={{
           objectFit: "cover",
           zIndex: "-1",
