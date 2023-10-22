@@ -1,14 +1,23 @@
 import "./style.HeroSection.scss";
-import Image from "next/image";
-import hero from "public/hero.jpg";
+import Image, { StaticImageData } from "next/image";
 import line from "public/line.svg";
 
-export default function HeroSection() {
+interface HeroSectionProp {
+  backgroundImage: StaticImageData;
+  title: string;
+  text: string;
+}
+
+export default function HeroSection({
+  backgroundImage,
+  title,
+  text,
+}: HeroSectionProp) {
   return (
     <section id="hero">
       <Image
         className="background-image"
-        src={hero}
+        src={backgroundImage}
         alt="Hero background image"
         quality={100}
         fill
@@ -20,11 +29,8 @@ export default function HeroSection() {
       />
       <div className="container">
         <div className="text-wrapper">
-          <h1 className="title">amazing thailand</h1>
-          <p className="hero-text">
-            Mountains, hills, plains and a lengthy coastline along the Gulf of
-            Thailand make up the country of Thailand.
-          </p>
+          <h1 className="title">{title}</h1>
+          <p className="hero-text">{text}</p>
           <button className="explore-btn">Explore Thai</button>
         </div>
         <Image src={line} alt="Line Decoration" className="line left" />
