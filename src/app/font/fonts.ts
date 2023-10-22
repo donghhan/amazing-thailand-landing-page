@@ -1,16 +1,16 @@
-import { PT_Sans, ZCOOL_XiaoWei } from "next/font/google";
-import localFont from "next/font/local";
-
-// export const zcoolXiaoWei = localFont({ src: "./ZCOOLXiaoWei-Regular.ttf" });
+import { PT_Sans, Charmonman, Prompt } from "next/font/google";
 
 export const ptSans = PT_Sans({
   subsets: ["latin"],
   weight: ["400", "700"],
-  display: "swap",
 });
 
-export const zcoolXiaoWei = ZCOOL_XiaoWei({
+export const charmonman = Charmonman({
   subsets: ["latin"],
   weight: ["400"],
-  display: "swap",
+});
+
+export const prompt = Prompt({
+  subsets: ["latin"],
+  weight: ["400"],
 });

@@ -1,6 +1,6 @@
 import "../styles/global.scss";
 import type { Metadata } from "next";
-import { ptSans, zcoolXiaoWei } from "./font/fonts";
+import { charmonman, prompt } from "./font/fonts";
 
 export const metadata: Metadata = {
   title: "Amazing Thailand",
@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={zcoolXiaoWei.className}>
+    <html lang="en" className={`${charmonman.className} ${prompt.className}`}>
       <body>{children}</body>
     </html>
   );

@@ -16,12 +16,20 @@ export default function HeroSection() {
         style={{
           objectFit: "cover",
           zIndex: "-1",
+          filter: "contrast(200%) brightness(60%)",
         }}
       />
       <div className="container">
         <div className="text-wrapper">
           <h1 className="title">amazing thailand</h1>
+          <p className="hero-text">
+            Mountains, hills, plains and a lengthy coastline along the Gulf of
+            Thailand make up the country of Thailand.
+          </p>
+          <button className="explore-btn">Explore Thai</button>
         </div>
+        <Image src={line} alt="Line Decoration" className="line left" />
+        <Image src={line} alt="Line Decoration" className="line right" />
       </div>
     </section>
   );

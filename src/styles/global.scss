@@ -6,9 +6,9 @@
   padding: 0;
 }
 
-// body {
-//   font-family: $ptSans;
-// }
+body {
+  font-family: $prompt;
+}
 
 a {
   text-decoration: none;
@@ -22,6 +22,11 @@ li {
 
 h1,
 h2 {
-  font-family: $zcoolXiaoWei;
+  font-family: $charmonman;
   text-transform: uppercase;
+}
+
+button {
+  background: transparent;
+  cursor: pointer;
 }
