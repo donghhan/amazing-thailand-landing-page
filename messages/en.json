@@ -3,7 +3,9 @@
         "locale": "🇹🇭"
     },
     "Home": {
-        "title": "amazing thailand",
-        "text": "Mountains, hills, plains and a lengthy coastline along the Gulf of Thailand make up the country of Thailand."
+        "hero_title": "amazing thailand",
+        "hero_text": "Mountains, hills, plains and a lengthy coastline along the Gulf of Thailand make up the country of Thailand.",
+        "smiles_title": "the land of smiles",
+        "smiles_text": "Without a doubt one of the most wonderful and hospitable countries in the world"
     }
 }

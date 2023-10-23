@@ -1,22 +1,16 @@
+import { SectionProp } from "@/types/type";
 import "./style.HeroSection.scss";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import line from "public/line.svg";
-
-interface HeroSectionProp {
-  backgroundImage: StaticImageData;
-  title: string;
-  text: string;
-}
 
 export default function HeroSection({
   backgroundImage,
   title,
   text,
-}: HeroSectionProp) {
+}: SectionProp) {
   return (
     <section id="hero">
       <Image
-        className="background-image"
         src={backgroundImage}
         alt="Hero background image"
         quality={100}
