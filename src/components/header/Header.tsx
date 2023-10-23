@@ -1,6 +1,6 @@
 "use client";
 import "./style.Header.scss";
-import { useTransition } from "react";
+import { useTransition, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { useRouter, usePathname } from "next-intl/client";
 import Image from "next/image";
@@ -37,8 +37,8 @@ export default function Header() {
   const locale = useLocale();
   const [isPending, startTransition] = useTransition();
 
-  const languageSelector = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    const language = event.target.value;
+  const languageSelector = (event: React.MouseEvent<HTMLButtonElement>) => {
+    const language = event.currentTarget.getAttribute("value") as string;
     startTransition(() => {
       router.replace(pathname, { locale: language });
     });
@@ -59,18 +59,23 @@ export default function Header() {
             </li>
           ))}
           <li className="language-selector">
-            <select
-              name="language"
-              id="language"
-              defaultValue={locale}
-              onChange={languageSelector}
-            >
-              {["en", "th"].map((lang) => (
-                <option key={lang} value={lang}>
-                  {t("locale", { locale: lang })}
-                </option>
-              ))}
-            </select>
+            {locale === "en" ? (
+              <button
+                className="language-btn"
+                onClick={languageSelector}
+                value="th"
+              >
+                {t("locale", { locale: "th" })}
+              </button>
+            ) : (
+              <button
+                className="language-btn"
+                onClick={languageSelector}
+                value="en"
+              >
+                {t("locale", { locale: "en" })}
+              </button>
+            )}
           </li>
         </ul>
       </nav>
