@@ -1,6 +1,5 @@
 import { SectionProp } from "@/types/type";
 import "./style.HistorySection.scss";
-import buddha from "public/buddha-background.svg";
 import territory from "public/thailand-territory.png";
 import Image from "next/image";
 
@@ -12,7 +11,7 @@ export default function HistorySection({
   return (
     <section id="history">
       <Image
-        src={buddha}
+        src={backgroundImage}
         alt="History section background image"
         fill
         quality={100}

@@ -20,15 +20,11 @@
 
     .text-wrapper {
       color: $white;
-
-      .text {
-        line-height: 2;
-      }
     }
   }
 
   @include media("<lg") {
-    padding: 2em 0;
+    padding: 5em 2em;
 
     .container {
       flex-direction: column;
