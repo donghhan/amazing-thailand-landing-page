@@ -1,9 +1,4 @@
-import { PT_Sans, Charmonman, Prompt } from "next/font/google";
-
-export const ptSans = PT_Sans({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-});
+import { Charmonman, Prompt } from "next/font/google";
 
 export const charmonman = Charmonman({
   subsets: ["latin"],

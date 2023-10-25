@@ -11,6 +11,7 @@ import LandOfSmileSection from "@/components/home/smiles/LandOfSmileSection";
 import HistorySection from "@/components/home/history/HistorySection";
 import CulturalOriginsSection from "@/components/home/culture/CulturalOriginsSection";
 import LandMarkSection from "@/components/home/landmark/LandMarkSection";
+import SportsSection from "@/components/home/sports/SportsSection";
 
 export default function Home() {
   const t = useTranslations("Home");
@@ -42,6 +43,11 @@ export default function Home() {
         backgroundImage={luxury2}
         title={t("landmark_title")}
         text={t("landmark_text")}
+      />
+      <SportsSection
+        backgroundImage={luxury}
+        title={t("sports_title")}
+        text={t("sports_text")}
       />
     </main>
   );
