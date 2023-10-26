@@ -1,35 +1,17 @@
-import { SectionProp } from "@/types/type";
 import "./style.HeroSection.scss";
-import Image from "next/image";
-import line from "public/line.svg";
+import { useTranslations } from "next-intl";
+import hero from "public/home_hero.jpg";
+import HeroLayout from "@/components/layout/HeroLayout";
 
-export default function HeroSection({
-  backgroundImage,
-  title,
-  text,
-}: SectionProp) {
+export default function HeroSection() {
+  const t = useTranslations("Home");
+
   return (
-    <section id="hero">
-      <Image
-        src={backgroundImage}
-        alt="Hero background image"
-        quality={100}
-        fill
-        style={{
-          objectFit: "cover",
-          zIndex: "-1",
-          filter: "contrast(200%) brightness(60%)",
-        }}
-      />
-      <div className="container">
-        <div className="text-wrapper">
-          <h1 className="title">{title}</h1>
-          <p className="hero-text">{text}</p>
-          <button className="explore-btn">Explore Thai</button>
-        </div>
-        <Image src={line} alt="Line Decoration" className="line left" />
-        <Image src={line} alt="Line Decoration" className="line right" />
-      </div>
-    </section>
+    <HeroLayout
+      id="hero"
+      backgroundImage={hero}
+      title={t("hero_title")}
+      text={t("hero_text")}
+    />
   );
 }

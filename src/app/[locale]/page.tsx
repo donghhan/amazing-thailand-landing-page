@@ -1,8 +1,5 @@
 "use client";
 import { useTranslations } from "next-intl";
-import hero from "public/home_hero.jpg";
-import luxury from "public/luxury.jpg";
-import luxury2 from "public/luxury2.jpg";
 import buddha from "public/buddha-background.svg";
 import temple from "public/thai-temple.svg";
 import Header from "@/components/header/Header";
@@ -19,12 +16,7 @@ export default function Home() {
   return (
     <main>
       <Header />
-      <HeroSection
-        backgroundImage={hero}
-        title={t("hero_title")}
-        text={t("hero_text")}
-        id="hero"
-      />
+      <HeroSection />
       <LandOfSmileSection />
       <HistorySection
         backgroundImage={buddha}
