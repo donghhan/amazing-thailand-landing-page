@@ -1,4 +1,6 @@
+import "./style.HeroLayout.scss";
 import { SectionProp } from "@/types/type";
+import Header from "../header/Header";
 import line from "public/line.svg";
 import Image from "next/image";
 
@@ -9,6 +11,7 @@ export default function HeroLayout({
 }: SectionProp) {
   return (
     <section id="hero">
+      <Header />
       <Image
         src={backgroundImage}
         alt="Hero background image"

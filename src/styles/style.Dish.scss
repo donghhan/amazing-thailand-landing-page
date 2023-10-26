@@ -1,0 +1,60 @@
+@use "../styles/variables/" as *;
+
+#info {
+  width: 100%;
+  background-color: $purple;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .text-wrapper {
+      color: $white;
+      text-align: center;
+    }
+
+    .line-upside {
+      width: 50%;
+    }
+  }
+
+  @include media("<lg") {
+    padding: 2.5em;
+
+    .text-wrapper {
+      max-width: 500px;
+    }
+
+    .line-upside {
+      width: 60%;
+      min-width: 300px;
+    }
+  }
+
+  @include media(">=lg") {
+    padding: 5em 0;
+
+    .text-wrapper {
+      max-width: 800px;
+    }
+
+    .line-upside {
+      width: 50%;
+
+      &:nth-of-type(1) {
+        margin-bottom: 3.5em;
+      }
+
+      &:nth-of-type(2) {
+        margin-top: 3.5em;
+      }
+    }
+  }
+}
