@@ -4,8 +4,6 @@
   width: 100%;
   min-height: 70vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
   background-color: $purple;
   z-index: -2;
@@ -13,7 +11,6 @@
 
   .container {
     display: flex;
-    align-items: center;
     color: $white;
   }
 
@@ -23,10 +20,6 @@
   }
 
   @include media("<lg") {
-    height: 75vh;
-    align-items: inherit;
-    padding: 5em 2em;
-
     .container {
       position: relative;
       flex-direction: column;
@@ -58,7 +51,8 @@
       left: 10em;
 
       .text-wrapper {
-        max-width: 600px;
+        max-width: 500px;
+        text-align: inherit;
 
         .title {
           font-size: 2.5rem;

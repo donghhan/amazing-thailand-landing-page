@@ -1,34 +1,11 @@
 "use client";
 import "./style.Header.scss";
-import { useTransition, useState } from "react";
+import { useTransition } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { useRouter, usePathname } from "next-intl/client";
 import Image from "next/image";
 import logo from "public/logo.png";
-import Link from "next/link";
-
-const linkData = [
-  {
-    href: "/",
-    text: "home",
-  },
-  {
-    href: "/main-dish",
-    text: "main dish",
-  },
-  {
-    href: "/side-dish",
-    text: "side dish",
-  },
-  {
-    href: "/beverage",
-    text: "beverage",
-  },
-  {
-    href: "/restaurant",
-    text: "restaurant",
-  },
-];
+import Link from "next-intl/link";
 
 export default function Header() {
   const t = useTranslations("Header");
@@ -36,6 +13,29 @@ export default function Header() {
   const pathname = usePathname();
   const locale = useLocale();
   const [isPending, startTransition] = useTransition();
+
+  const linkData = [
+    {
+      href: "/",
+      text: "home",
+    },
+    {
+      href: "/main-dish",
+      text: "main dish",
+    },
+    {
+      href: "/side-dish",
+      text: "side dish",
+    },
+    {
+      href: "/beverage",
+      text: "beverage",
+    },
+    {
+      href: "/restaurant",
+      text: "restaurant",
+    },
+  ];
 
   const languageSelector = (event: React.MouseEvent<HTMLButtonElement>) => {
     const language = event.currentTarget.getAttribute("value") as string;

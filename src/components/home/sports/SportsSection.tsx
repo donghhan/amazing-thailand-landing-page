@@ -1,16 +1,13 @@
-import { SectionProp } from "@/types/type";
 import "./style.SportsSection.scss";
+import luxury from "public/luxury.jpg";
 import Image from "next/image";
 import muaythai from "public/muay-thai.jpg";
 import longboat from "public/long-boat-race.jpeg";
 import { useTranslations } from "next-intl";
+import Layout from "@/components/layout/Layout";
 import kite from "public/kite.jpeg";
 
-export default function SportsSection({
-  backgroundImage,
-  title,
-  text,
-}: SectionProp) {
+export default function SportsSection() {
   const t = useTranslations("Home");
 
   const sportsData = [
@@ -32,35 +29,27 @@ export default function SportsSection({
   ];
 
   return (
-    <section id="sports">
-      <Image
-        src={backgroundImage}
-        alt="background image"
-        quality={100}
-        fill
-        style={{ zIndex: "-1", objectFit: "cover" }}
-      />
-      <div className="container">
-        <div className="text-wrapper">
-          <h1 className="title">{title}</h1>
-          <p className="text">{text}</p>
-        </div>
-        <div className="image-wrapper">
-          {sportsData.map((data, index) => (
-            <div className="card" key={index}>
-              <Image
-                src={data.src}
-                alt="Sports thumbnail image"
-                style={{ objectFit: "cover" }}
-              />
-              <div className="info-wrapper">
-                <h2 className="title">{data.title}</h2>
-                <p className="explanation">{data.text}</p>
-              </div>
+    <Layout
+      id="sports"
+      backgroundImage={luxury}
+      title={t("sports_title")}
+      text={t("sports_text")}
+    >
+      <div className="image-wrapper">
+        {sportsData.map((data, index) => (
+          <div className="card" key={index}>
+            <Image
+              src={data.src}
+              alt="Sports thumbnail image"
+              style={{ objectFit: "cover" }}
+            />
+            <div className="info-wrapper">
+              <h2 className="title">{data.title}</h2>
+              <p className="explanation">{data.text}</p>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
-    </section>
+    </Layout>
   );
 }

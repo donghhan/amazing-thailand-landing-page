@@ -21,7 +21,6 @@ export default function CulturalOriginsSection({
           bottom: "0",
           filter: "grayscale(.3) brightness(.2)",
           zIndex: "-1",
-          //   width: "100%",
         }}
       />
       <div className="container">

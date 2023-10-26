@@ -1,64 +1,33 @@
 @use "../../../styles/variables/" as *;
 
-#landmark {
-  width: 100%;
-  min-height: 100vh;
-  padding: 5em 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+#landmarks {
+  .text-wrapper {
+    color: $black;
+  }
 
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .image-wrapper {
+    display: grid;
 
-    .text-wrapper {
-      text-align: center;
-      color: $black;
-    }
+    .card {
+      position: relative;
 
-    .image-wrapper {
-      display: grid;
-      gap: 2em;
-
-      .card {
-        position: relative;
+      img {
+        border-radius: 20px;
       }
     }
   }
 
   @include media("<lg") {
-    padding: 5em 2.75em;
-
-    .title {
-      font-size: 1.75rem;
-    }
-
-    .text {
-      font-size: 0.9rem;
-    }
-
     .image-wrapper {
-      margin-top: 3em;
       grid-template-columns: 1fr;
-      max-width: 500px;
+      gap: 2em;
     }
   }
 
   @include media(">=lg") {
-    .title {
-      font-size: 2.5rem;
-    }
-
-    .text {
-      font-size: 1rem;
-    }
-
     .image-wrapper {
-      max-width: 80%;
-      margin-top: 5em;
+      width: 90%;
+      gap: 1em;
       grid-template-columns: repeat(3, 1fr);
     }
   }

@@ -23,32 +23,23 @@ export default function Home() {
         backgroundImage={hero}
         title={t("hero_title")}
         text={t("hero_text")}
+        id="hero"
       />
-      <LandOfSmileSection
-        backgroundImage={luxury}
-        title={t("smiles_title")}
-        text={t("smiles_text")}
-      />
+      <LandOfSmileSection />
       <HistorySection
         backgroundImage={buddha}
         title={t("history_title")}
         text={t("history_text")}
+        id="history"
       />
       <CulturalOriginsSection
         backgroundImage={temple}
         title={t("cultural_title")}
         text={t("cultural_text")}
+        id="origins"
       />
-      <LandMarkSection
-        backgroundImage={luxury2}
-        title={t("landmark_title")}
-        text={t("landmark_text")}
-      />
-      <SportsSection
-        backgroundImage={luxury}
-        title={t("sports_title")}
-        text={t("sports_text")}
-      />
+      <LandMarkSection />
+      <SportsSection />
     </main>
   );
 }

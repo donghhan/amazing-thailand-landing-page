@@ -1,6 +1,9 @@
 {
     "Header": {
-        "locale": "🇹🇭"
+        "locale": "🇹🇭",
+        "main_dish": "Main Dish",
+        "side_dish": "Side Dish",
+        "beverage": "Beverage"
     },
     "Home": {
         "hero_title": "amazing thailand",
