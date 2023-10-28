@@ -22,3 +22,5 @@ Introducing amazing Thailand regarding history and several famous main/side dish
 [Preview Website](https://amazing-thailand-landing-page.vercel.app/)
 
 # Preview 
+
+![hero](readme-preview/hero.gif)
