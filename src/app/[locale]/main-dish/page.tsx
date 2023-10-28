@@ -62,7 +62,7 @@ export default function MainDish() {
         text={t("hero_text")}
         id="hero"
       />
-      <section id="info">
+      <section id="second">
         <div className="container">
           <Image
             src={lineUpside}
@@ -148,7 +148,7 @@ export default function MainDish() {
                 <div className="info-wrapper">
                   <h2 className="food-title">{food.title}</h2>
                   <p className="food-text">{food.text}</p>
-                  <Link className="cook-btn" href={food.href}>
+                  <Link className="cook-btn" href={food.href} target="_blank">
                     Cook it
                   </Link>
                 </div>

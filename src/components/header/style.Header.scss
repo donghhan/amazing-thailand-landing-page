@@ -29,6 +29,32 @@ header {
   }
 
   @include media("<lg") {
+    padding: 3em;
+
+    nav {
+      align-items: center;
+      justify-content: space-between;
+      height: 100px;
+
+      .logo-wrapper {
+        img {
+          max-width: 150px;
+          height: 80px;
+        }
+      }
+
+      .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5em;
+
+        li {
+          a {
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
   }
 
   @include media(">=lg") {

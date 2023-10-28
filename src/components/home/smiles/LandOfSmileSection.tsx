@@ -8,7 +8,7 @@ export default function LandOfSmileSection() {
 
   return (
     <Layout
-      id="smile"
+      id="second"
       backgroundImage={luxury}
       title={t("smiles_title")}
       text={t("smiles_text")}

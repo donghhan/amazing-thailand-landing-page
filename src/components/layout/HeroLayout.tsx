@@ -2,6 +2,7 @@ import "./style.HeroLayout.scss";
 import { SectionProp } from "@/types/type";
 import Header from "../header/Header";
 import line from "public/line.svg";
+import Link from "next/link";
 import Image from "next/image";
 
 export default function HeroLayout({
@@ -27,7 +28,9 @@ export default function HeroLayout({
         <div className="text-wrapper">
           <h1 className="title">{title}</h1>
           <p className="hero-text">{text}</p>
-          <button className="explore-btn">Explore Thai</button>
+          <Link href="#second" className="explore-btn">
+            Explore Thai
+          </Link>
         </div>
         <Image src={line} alt="Line Decoration" className="line left" />
         <Image src={line} alt="Line Decoration" className="line right" />

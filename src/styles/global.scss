@@ -9,6 +9,7 @@
 body {
   font-family: $prompt;
   font-size: 10px;
+  scroll-behavior: smooth !important;
 }
 
 a {
