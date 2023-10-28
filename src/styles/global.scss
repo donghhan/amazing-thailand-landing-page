@@ -37,26 +37,40 @@ button {
   cursor: pointer;
 }
 
-@include media("<lg") {
-  .text-wrapper {
-    .title {
-      font-size: 2.75rem;
-    }
+section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    .text {
-      font-size: 1rem;
+  @include media("<lg") {
+    padding: 5em 2em;
+
+    .text-wrapper {
+      .title {
+        font-size: 2.75rem;
+      }
+
+      .text {
+        font-size: 1rem;
+      }
     }
   }
-}
 
-@include media(">=lg") {
-  .text-wrapper {
-    .title {
-      font-size: 3.5rem;
-    }
+  @include media(">=lg") {
+    padding: 5em 0;
 
-    .text {
-      font-size: 1.25rem;
+    .text-wrapper {
+      margin-bottom: 3em;
+
+      .title {
+        font-size: 3.5rem;
+      }
+
+      .text {
+        font-size: 1.25rem;
+      }
     }
   }
 }

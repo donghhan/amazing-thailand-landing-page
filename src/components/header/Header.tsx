@@ -27,10 +27,6 @@ export default function Header() {
       href: "/side-dish",
       text: "side dish",
     },
-    {
-      href: "/beverage",
-      text: "beverage",
-    },
   ];
 
   const languageSelector = (event: React.MouseEvent<HTMLButtonElement>) => {
