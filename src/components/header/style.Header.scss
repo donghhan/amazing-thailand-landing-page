@@ -23,7 +23,8 @@ header {
     }
   }
 
-  .link {
+  .link,
+  .language-btn {
     color: $white;
     text-transform: uppercase;
   }
@@ -48,10 +49,9 @@ header {
         flex-direction: column;
         gap: 0.5em;
 
-        li {
-          a {
-            font-size: 0.9rem;
-          }
+        .link,
+        .language-btn {
+          font-size: 0.9rem;
         }
       }
     }
